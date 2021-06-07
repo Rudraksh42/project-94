@@ -17,7 +17,7 @@ firebase.initializeApp(firebaseConfig);
   username=document.getElementById("user_name").value;
   localStorage.setItem("user_name", username);
   window.location = "glitter_room.html";
-  firebase.database().ref("/").child(username).update({
+  firebase.getData().ref("/").child(username).update({
       purpose:"addinguser"
   });
   }
